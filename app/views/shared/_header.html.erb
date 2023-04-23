@@ -8,7 +8,7 @@
       <!-- <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> -->
       <nav class="navbar navbar-expand-lg navbar-light nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">Share SAUNA</a>
+          <a class="navbar-brand text-white" href="/">Share SAUNA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -20,10 +20,22 @@
         <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
       </form>
 
-      <div class="text-end">
-        <a href="#" class="btn btn-outline-light me-2">Login</a>
-        <a href="#" class="btn btn-outline-light me-2">Sign-up</a>
-      </div>
+      <% if user_signed_in? %>
+        <div class="text-end">
+          <%# <a href="/users/sign_out" class="btn btn-outline-light me-2">Logout</a> %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-light me-2" %>
+          <%# <a href="#" class="btn btn-outline-light me-2"></a> %>
+          <%= link_to current_user.nickname, "#", class: "btn btn-outline-light me-2" %>
+        </div>
+      <% else %>
+        <div class="text-end">
+          <%# <a href="/users/sign_in" class="btn btn-outline-light me-2">Log-in</a> %>
+          <%= link_to 'Log-in', new_user_session_path, class: "btn btn-outline-light me-2" %>
+          <%# <a href="/users/sign_up" class="btn btn-outline-light me-2">Sign-up</a> %>
+          <%= link_to 'sign-up', new_user_registration_path, class: "btn btn-outline-light me-2" %>
+        </div>
+      <% end %>
+
     </div>
   </div>
 </header>
