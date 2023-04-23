@@ -1,0 +1,22 @@
+.second-fotter {
+  width: 100%;
+  min-width: 800px;
+  height: 200px;
+  background-color: rgb(38, 127, 250);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-fotter-text-wrap {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.second-fotter-text {
+  color: white;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
