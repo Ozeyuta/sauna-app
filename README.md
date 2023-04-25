@@ -1,52 +1,45 @@
-# テーブル設計
+# アプリケーション名
+Share SAUNA
 
-## users テーブル
+# アプリケーション概要
+サウナのシェアができ、ユーザー同士でコミュニケーションが取れるアプリケーション
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
-| first_name         | string | null: false               |
-| last_name          | string | null: false               |
-| first_name_kana    | string | null: false               |
-| last_name_kana     | string | null: false               |
+# URL
+実装中
 
-### Association
+# テスト用アカウント
+・Basic認証パスワード：実装中
+・Basic認証ID：実装中
+・メールアドレス：test@test.com
+・パスワード：test1111
 
-- has_many :protos
-- has_many :comments
+# 利用方法
+## 自分のサウナの活動をシェアする。
+1.一覧ページのヘッダーからユーザー新規投稿を行う。
+2.サ活投稿ボタンから、投稿の内容（必須項目9つ）を入力し投稿する。
 
-## protos テーブル
+## サウナの投稿にコメントする。
+1.一覧ページから気になる投稿をクリックして詳細ページに遷移する。
+2.詳細ページにあるコメント投稿欄にコメントを記入する。
 
-| Column             | Type        | Options                        |
-| ------------------ | ----------- | ------------------------------ |
-| title              | string      | null: false                    |
-| post_text          | text        |                                |
-| sauna_id           | integer     | null: false                    |
-| cold_bath_id       | integer     | null: false                    |
-| loury_id           | integer     | null: false                    |
-| auto_loury_id      | integer     | null: false                    |
-| self_loury_id      | integer     | null: false                    |
-| outside_id         | integer     | null: false                    |
-| invigorate_id      | integer     | null: false                    |
-| water_id           | integer     | null: false                    |
-| user               | references  | null: false, foreign_key: true |
+# アプリケーション話作成した背景
+学生時代からの友人に課題をヒアリングし、「仕事の疲れが取れず、なかなか仕事に集中できない。最近リフレッシュできていない。」という課題を抱えていることが判明した。課題を分析した結果、「今まで趣味にしていたサウナを探したり、自分好みのサウナを見つけるのが面倒になっている」ということが原因であると仮説を立てた。同様の問題を抱えている方も多いと推測し、原因を解決するために、サウナをシェアし、ユーザー同士でコミュニケーションが取れるSNSアプリケーションを開発することにした。
 
-### Association
+# 洗い出した要件
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1v0C1ohQVUYoCjVGMBNFCnrqOAlMHCE-lI4dvpEZU-uE/edit#gid=982722306)
 
-- belongs_to :user
-- has_many :comments
+# 実装した機能についての画像やGIFおよびその説明
+現在実装中
 
-## comments テーブル
+# 実装予定の機能
+現在実装中
 
-| Column             | Type        | Options                        |
-| ------------------ | ----------- | ------------------------------ |
-| user               | references  | null: false, foreign_key: true |
-| proto              | references  | null: false, foreign_key: true |
-| content            | text        | null: false                    |
+# データベース設計
 
-### Association
+# 画面遷移図
 
-- belongs_to :user
-- belongs_to :proto
+# 開発環境
+
+# ローカルでの動作方法
+
+# 工夫したポイント
