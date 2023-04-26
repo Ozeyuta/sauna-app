@@ -35,11 +35,23 @@ Share SAUNA
 現在実装中
 
 # データベース設計
+https://drive.google.com/file/d/1Wv0DW2kvnV0lrRt9uKHKynTJoEibx9eU/view?usp=sharing
 
 # 画面遷移図
+https://drive.google.com/file/d/1fUXkxZVJQ-DnYxjifbYclyiVBZyqUQD9/view?usp=sharing
 
 # 開発環境
+<br>・フロントエンド</br>
+<br>・バックエンド</br>
+<br>・インフラ</br>
+<br>・テスト</br>
+<br>・テキストエディタ</br>
 
 # ローカルでの動作方法
+% gh repo clone Ozeyuta/sauna-app
+% cd sauna-up
+% bundle install
+% yarn install
 
 # 工夫したポイント
+開発中
