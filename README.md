@@ -48,10 +48,10 @@ https://drive.google.com/file/d/1fUXkxZVJQ-DnYxjifbYclyiVBZyqUQD9/view?usp=shari
 <br>・テキストエディタ</br>
 
 # ローカルでの動作方法
-% gh repo clone Ozeyuta/sauna-app
-% cd sauna-up
-% bundle install
-% yarn install
+<br>% gh repo clone Ozeyuta/sauna-app</br>
+<br>% cd sauna-up</br>
+<br>% bundle install</br>
+<br>% yarn install</br>
 
 # 工夫したポイント
 開発中
