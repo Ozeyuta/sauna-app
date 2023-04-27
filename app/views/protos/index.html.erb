@@ -45,7 +45,8 @@
       <h1 class="fw-light">Album example</h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
       <p>
-        <a href="#" class="btn btn-primary my-2">サ活投稿</a>
+        <%# <a href="#" class="btn btn-primary my-2">サ活投稿</a> %>
+        <%= link_to 'サ活投稿', new_proto_path, class: "btn btn-primary my-2" %>
         <a href="#" class="btn btn-warning my-2">サ飯投稿</a>
       </p>
     </div>
