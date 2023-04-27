@@ -1,0 +1,26 @@
+class ColdBath < ActiveHash::Base
+  self.data = [
+    { id: 1, name: '---' },
+    { id: 2, name: '20℃以上' },
+    { id: 3, name: '19℃' },
+    { id: 4, name: '18℃' },
+    { id: 5, name: '17℃' },
+    { id: 6, name: '16℃' },
+    { id: 7, name: '15℃' },
+    { id: 8, name: '14℃' },
+    { id: 9, name: '13℃' },
+    { id: 10, name: '12℃' },
+    { id: 11, name: '11℃' },
+    { id: 12, name: '10℃' },
+    { id: 13, name: '9℃' },
+    { id: 14, name: '8℃' },
+    { id: 15, name: '7℃' },
+    { id: 16, name: '6℃' },
+    { id: 17, name: '5℃' },
+    { id: 18, name: '4℃' },
+    { id: 19, name: '3℃' },
+    { id: 20, name: '2℃' },
+    { id: 21, name: '1℃' },
+    { id: 22, name: '0℃以下' },
+  ]
+end
