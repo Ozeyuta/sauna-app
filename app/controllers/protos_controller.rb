@@ -9,6 +9,11 @@ class ProtosController < ApplicationController
 
   def create
     @proto = Proto.create(proto_params)
+    if @proto.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
