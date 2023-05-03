@@ -1,6 +1,6 @@
 class ProtosController < ApplicationController
   def index 
-    @protos = Proto.all
+    @protos = Proto.all.order(created_at: :desc)
   end
 
   def new
