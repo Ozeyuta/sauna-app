@@ -1,0 +1,70 @@
+<%= render "shared/second-header" %>
+
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @proto.user.nickname %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @proto.image,class:"item-box-img" %>
+    </div>
+    <% if user_signed_in? %>
+      <% if current_user.id == @proto.user.id %>
+        <%= link_to "商品の編集", "#", method: :get, class: "item-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", "#", method: :delete, class:"item-destroy" %>
+      <% end %>
+    <% end %>
+
+    <div class="item-explain-box">
+      <span><%= @proto.title %></span>
+    </div>
+    <div class="item-explain-box">
+      <span><%= @proto.post_text %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">サウナの室温</th>
+          <td class="detail-value"><%= @proto.sauna.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">水風呂の水温</th>
+          <td class="detail-value"><%= @proto.cold_bath.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ロウリュ</th>
+          <td class="detail-value"><%= @proto.loury.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">オートロウリュ</th>
+          <td class="detail-value"><%= @proto.auto_loury.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">セルフロウリュ</th>
+          <td class="detail-value"><%= @proto.self_loury.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">外気浴</th>
+          <td class="detail-value"><%= @proto.outside.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">整いスペース</th>
+          <td class="detail-value"><%= @proto.invigorate.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">給水機</th>
+          <td class="detail-value"><%= @proto.water.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <%# <div class="option">
+      <div class="favorite-btn">
+        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20">
+        <span>お気に入り 0</span>
+      </div>
+    </div%> 
+  </div>
+</div>
+
+<%= render "shared/second-footer" %>
