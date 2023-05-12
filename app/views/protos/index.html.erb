@@ -19,57 +19,6 @@
 </div>
 <%# メイン画面 %>
 
-<%# 投稿一覧 %>
-<%# <div class='item-contents'>
-  <h2 class='title'>みんなのサ活・サ飯一覧</h2>
-  <div class="subtitle" >
-    New Post
-  </div>
-  <ul class='item-lists'>
-
-  <% @protos.each do |proto| %>
-    <%# <li class='list'>
-      <%= link_to proto_path(proto.id) do %>
-      <%# <div class='item-img-content'>
-        <%= image_tag proto.image, class: "item-img" %>
-      <%# </div>
-      <div class='item-info'>
-        <h3 class='item-name'>
-          <%= proto.title %>  
-        <%# </h3>
-        <div class='item-price'>
-          <span>サウナ室<%= proto.sauna.name ><br>水風呂<%= proto.cold_bath.name ></span> 
-          <%# <div class='star-btn'>
-            <%= image_tag "star.png", class:"star-icon" >
-            <span class='star-count'>0</span>
-          </div%> 
-        <%# </div>
-      </div>
-      <% end %>
-    <%# </li> 
-  <% end %> 
-
-    <%# <% if @protos.blank? then %>
-      <%# <li class='list'>
-        <%= link_to '#' do %> 
-        <%# <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %> 
-        <%# <div class='item-info'>
-          <h3 class='item-name'>
-            サ活を投稿しよう！
-          </h3>
-          <div class='item-price'>
-            <span>サウナ室<br>水風呂</span> %> 
-            <%# <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" >
-              <span class='star-count'>0</span>
-            </div%>
-          <%# </div>
-        </div>
-        <% end %> 
-      <%# </li>
-    <% end %> 
-  <%# </ul>
-</div> %>
 <%# /投稿一覧 %>
 <div class="album py-5 bg-light">
   <div class="container">
@@ -116,6 +65,5 @@
     <% end %> 
   </div>
 </div>
-
 
 <%= render "shared/footer" %>
