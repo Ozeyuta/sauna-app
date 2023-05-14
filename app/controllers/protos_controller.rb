@@ -20,6 +20,11 @@ class ProtosController < ApplicationController
     @proto = Proto.find(params[:id])
   end
 
+  def edit
+    @proto = Proto.find(params[:id])
+  end
+
+  
   private
 
   def proto_params
