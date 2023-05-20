@@ -24,6 +24,15 @@ class ProtosController < ApplicationController
     @proto = Proto.find(params[:id])
   end
 
+  def update
+    @proto = Proto.find(params[:id])
+    @proto.update(proto_params)
+    if @proto.update(proto_params)
+      redirect_to proto_path
+    else
+      render :edit
+    end
+  end
   
   private
 
