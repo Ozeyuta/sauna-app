@@ -33,6 +33,14 @@ class ProtosController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @proto = Proto.find(params[:id])
+    if @proto.user_id == current_user.id
+      @proto.destroy
+    end
+    redirect_to root_path
+  end
   
   private
 
