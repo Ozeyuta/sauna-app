@@ -14,4 +14,5 @@ class User < ApplicationRecord
   end
 
   has_many :protos
+  has_many :comments
 end
